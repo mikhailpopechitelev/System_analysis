@@ -1,7 +1,7 @@
 import json
 
 
-def find_core_disagreements(rank_a_json, rank_b_json):
+def main(rank_a_json, rank_b_json):
     rank_a = json.loads(rank_a_json)
     rank_b = json.loads(rank_b_json)
 
@@ -27,7 +27,10 @@ def find_core_disagreements(rank_a_json, rank_b_json):
     return json.dumps(core_disagreements)
 
 
-rank_a = '[1,[2,3],4,[5,6,7],8,9,10]'
-rank_b = '[[1,2],[3,4,5],6,7,9,[8,10]]'
-result = find_core_disagreements(rank_a, rank_b)
-print(result)
+
+if __name__ == "__main__":
+    rank_a = '[1,[2,3],4,[5,6,7],8,9,10]'
+    rank_b = '[[1,2],[3,4,5],6,7,9,[8,10]]'
+    print(main(rank_a, rank_b))
+
+

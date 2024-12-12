@@ -25,7 +25,7 @@ def dice_joint_distribution():
     return Counter((i + j, i * j) for i, j in outcomes), len(outcomes)
 
 
-def calculate_entropies():
+def main():
     # Генерация совместного распределения и общего числа исходов
     joint_dist, total_outcomes = dice_joint_distribution()
 
@@ -46,4 +46,4 @@ def calculate_entropies():
 
 
 if __name__ == "__main__":
-    print(calculate_entropies())
+    print(main())
